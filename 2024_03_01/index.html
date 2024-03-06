@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        float: left;
+        width: 20%;
+        background-color: #f2f2f2;
+        padding: 15px;
+        height: 100vh;
+        /* 100% of the viewport height */
+        box-sizing: border-box;
+      }
+
+      main {
+        margin-left: 20%;
+        /* Width of the nav */
+        padding: 20px;
+      }
+
+      li {
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 600px) {
+        nav {
+          width: 100%;
+          float: none;
+        }
+
+        main {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <template id="tableClient">
+      <tr>
+        <td>{{userid}}</td>
+        <td>{{nom}}</td>
+        <td>{{prenom}}</td>
+        <td>{{ville}}</td>
+      </tr>
+    </template>
+    <template id="tableProduit">
+      <tr>
+        <td>{{numarticle}}</td>
+        <td>{{description}}</td>
+        <td>{{quantite}}</td>
+        <td>{{price}}</td>
+      </tr>
+    </template>
+
+    <header>
+      <h1>Mon Site Web</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>Accueil</li>
+        <li id="client">CLIENT</li>
+        <li id="produit">PRODUIT</li>
+        <li id="stat">STATS</li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <h2>Bienvenue sur mon site</h2>
+      <p>Contenu principal de la page.</p>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

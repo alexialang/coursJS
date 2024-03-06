@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajouter user</title>
+  </head>
+  <body>
+    <form
+      action="ajout_user.php"
+      method="post"
+      name="formulaire"
+      id="formulaire"
+    >
+      email: <input type="mail" name="user_mail" id="user_mail" />
+      <div id="alerte"></div>
+      <br />
+      nom: <input type="testd" name="user_nom" id="user_nom" /><br />
+      prénom : <input type="text" name="use_prenom" /> <br />
+      mot de passe : <input type="password" name="pwd1" id="pwd1" /><br />
+      confirmation mdp : <input type="password" name="pwd2" id="pwd2" /><br />
+      <div id="alerte2"></div>
+      <input type="submit" value="ajouter" name="valider" id="valider" />
+    </form>
+    <script src="controle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template id="myTemplate">
+      <tr>
+        <td>{{numero}}</td>
+        <td>{{userid}}</td>
+        <td>{{libelle}}</td>
+        <td>{{termined}}</td>
+      </tr>
+    </template>
+    <table>
+      <thead>
+        <tr>
+          <th>numéro</th>
+          <th>user id</th>
+
+          <th>libelle</th>
+          <th>termine</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./json.js"></script>
+  </body>
+</html>

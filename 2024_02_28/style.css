@@ -1,0 +1,12 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  border: solid black 1px;
+  width: 80%;
+ 
+}
+
+
