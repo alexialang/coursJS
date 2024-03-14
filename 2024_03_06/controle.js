@@ -21,6 +21,13 @@ user_mail.addEventListener("blur", function (e) {
     });
 });
 
+// fonction de verification de mdp
+function verifMdp() {
+  const regex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  return regex();
+}
+
 //  controler les mdp
 //  le controle se fera sur le click du boutton submit
 let btn_submit = document.querySelector("#valider");
@@ -30,15 +37,17 @@ btn_submit.addEventListener("click", function (e) {
   // controler que les mdp sont identiques
   let pwd1 = document.querySelector("#pwd1");
   let pwd2 = document.querySelector("#pwd2");
-  if (pwd1.value === pwd2.value) {
-    console.log("identique");
-    // se débrouiller pour valider le formulaire
-    document.querySelector("#formulaire").submit();
-  } else {
-    console.log("different");
-    // afficher un petit message
-    let alerte2 = document.querySelector("#alerte2");
-    alerte2.innerHTML = "vos mot de passe sont différents";
-    // document.querySelector("#alerte2").innerHtml = "vos mots de passe sont differents"
-  }
+
+  if (pwd1)
+    if (pwd1.value === pwd2.value) {
+      console.log("identique");
+      // se débrouiller pour valider le formulaire
+      document.querySelector("#formulaire").submit();
+    } else {
+      console.log("different");
+      // afficher un petit message
+      let alerte2 = document.querySelector("#alerte2");
+      alerte2.innerHTML = "vos mot de passe sont différents";
+      // document.querySelector("#alerte2").innerHtml = "vos mots de passe sont differents"
+    }
 });
